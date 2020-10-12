@@ -20,15 +20,13 @@ import com.example.tf.R;
 
 public class DetalleInquilino extends Fragment {
 
-    private DetalleInquilinoViewModel mViewModel;
+    private DetalleInquilinoViewModel detalleInquilinoViewModel;
     private Inquilino inquilino;
     private EditText etDireccion, etDni, etApellido, etNombre, etTelefono;
 
 
 
-    public static DetalleInquilinos newInstance() {
-        return new DetalleInquilinos();
-    }
+    public static DetalleInquilino newInstance() { return new DetalleInquilino(); }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -41,7 +39,7 @@ public class DetalleInquilino extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(DetalleInquilinoViewModel.class);
+        detalleInquilinoViewModel = ViewModelProviders.of(this).get(DetalleInquilinoViewModel.class);
         // TODO: Use the ViewModel
     }
 
@@ -55,8 +53,8 @@ public class DetalleInquilino extends Fragment {
 
 
 
-        mViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(DetalleInquilinoViewModel.class);
-        mViewModel.getInquilino().observe(getActivity(), new Observer<Inquilino>() {
+        detalleInquilinoViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(DetalleInquilinoViewModel.class);
+        detalleInquilinoViewModel.getInquilinos().observe(getActivity(), new Observer<Inquilino>() {
             @Override
             public void onChanged(Inquilino inquilinos) {
 
@@ -69,7 +67,7 @@ public class DetalleInquilino extends Fragment {
             }
         });
 
-        mViewModel.cargarInquilino(getArguments());
+        detalleInquilinoViewModel.cargarInquilino(getArguments());
         // etDom.setText(inmuebles.getDomicilio());
     }
 

@@ -14,20 +14,22 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tf.R;
+import com.example.tf.ui.entidades.Inmueble;
 import com.example.tf.ui.entidades.Inquilino;
 
 import java.util.List;
 
-public class AdapterInq extends RecyclerView.Adapter<AdapterInq.ViewHolder> {
+public class AdapterInq extends RecyclerView.Adapter<AdapterInq.ViewHolder> implements View.OnClickListener{
 
     private Context context;
-    private List<Inquilino> inquilinos;
+    private List<Inquilino> model;
     private LayoutInflater inflater;
+    private View.OnClickListener listener;
 
     public AdapterInq(Context context, List<Inquilino> inquilinos, LayoutInflater inflater){
 
         this.context = context;
-        this.inquilinos = inquilinos;
+        this.model = inquilinos;
         this.inflater = inflater;
     }
 
@@ -38,43 +40,58 @@ public class AdapterInq extends RecyclerView.Adapter<AdapterInq.ViewHolder> {
         return new ViewHolder(view);
     }
 
+    public void setOnClickListener(View.OnClickListener listener){
+        this.listener = listener;
+    }
+
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        holder.direccion.setText(inquilinos.get(position).getDireccion());
-        holder.apellido.setText(inquilinos.get(position).getApellido());
-        holder.ivImagen.setImageResource(inquilinos.get(position).getImagenIdInq());
+        String dir = model.get(position).getDireccion();
+        String apell = model.get(position).getApellido();
+        int imagen = model.get(position).getImagenIdInq();
+
+        holder.dir.setText(dir);
+        holder.apell.setText(apell);
+        holder.imagen.setImageResource(imagen);
 
     }
 
     @Override
     public int getItemCount() {
-        return inquilinos.size();
+        return model.size();
     }
+
+    @Override
+    public void onClick(View view) {
+        if(listener!=null){
+            listener.onClick(view);
+    }}
+
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView apellido;
-        TextView direccion;
-        ImageView ivImagen;
+        TextView dir, apell;
+        ImageView imagen;
 
-        public ViewHolder (@NonNull View itemView){
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            ivImagen = itemView.findViewById(R.id.ivImagenInq);
-            direccion = itemView.findViewById(R.id.txDireccionInq);
-            apellido = itemView.findViewById(R.id.txApellidoInq);
+
+            dir = itemView.findViewById(R.id.txDireccionInq);
+            apell = itemView.findViewById(R.id.txApellidoInq);
+            imagen = itemView.findViewById(R.id.ivImagenInq);
+
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     Bundle bundle = new Bundle();
-                    Inquilino inquilino = inquilinos.get(getAdapterPosition());
-                    bundle.putSerializable("inquilinos", inquilino);
-                    Navigation.findNavController((Activity) context,R.id.nav_host_fragment).navigate(R.id.detalleInquilinos, bundle);
-
+                    Inquilino inquilinos = model.get(getAdapterPosition());
+                    bundle.putSerializable("datosInq", inquilinos);
+                    Navigation.findNavController((Activity) context, R.id.nav_host_fragment).navigate(R.id.detalleInquilinos, bundle);
                 }
             });
         }
-
-
     }
 }
+
+

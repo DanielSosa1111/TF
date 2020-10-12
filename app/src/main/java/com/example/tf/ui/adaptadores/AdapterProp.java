@@ -24,7 +24,6 @@ public class AdapterProp extends RecyclerView.Adapter<AdapterProp.ViewHolder> im
     LayoutInflater inflater;
     List<Inmueble> model;
     private Context context;
-
     private View.OnClickListener listener;
 
     public AdapterProp(Context context, List<Inmueble> model){
@@ -32,9 +31,6 @@ public class AdapterProp extends RecyclerView.Adapter<AdapterProp.ViewHolder> im
         this.inflater = LayoutInflater.from(context);
         this.model = model;
         this.context = context;
-
-
-
     }
 
     @NonNull
@@ -46,26 +42,20 @@ public class AdapterProp extends RecyclerView.Adapter<AdapterProp.ViewHolder> im
     }
 
     public void setOnClickListener(View.OnClickListener listener){
-
         this.listener = listener;
-
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-//aca
+
         String dir = model.get(position).getDomicilio();
         String cod = model.get(position).getCodigo();
-
         int imagen = model.get(position).getImagenId();
         Boolean checkbox = model.get(position).isEstado();
-
         holder.dir.setText(dir);
         holder.cod.setText(cod);
         holder.imagen.setImageResource(imagen);
         holder.checkBox.setChecked(checkbox);
-
-
     }
 
     @Override

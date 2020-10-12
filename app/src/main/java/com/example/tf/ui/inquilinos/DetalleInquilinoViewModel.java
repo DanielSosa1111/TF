@@ -12,20 +12,20 @@ import com.example.tf.ui.entidades.Inquilino;
 
 public class DetalleInquilinoViewModel extends ViewModel {
     // TODO: Implement the ViewModel
-    private MutableLiveData<Inquilino> inquilino;
+    private MutableLiveData<Inquilino> inquilinos;
     public DetalleInquilinoViewModel(){super();}
-    public LiveData<Inquilino> getInquilino(){
+    public LiveData<Inquilino> getInquilinos(){
 
-        if(inquilino==null){
-            inquilino=new MutableLiveData<>();
+        if(inquilinos==null){
+            inquilinos=new MutableLiveData<>();
         }
-        return inquilino;
+        return inquilinos;
     }
 
     public void cargarInquilino(Bundle bundle){
 
         Inquilino inq = (Inquilino) bundle.getSerializable("datosInq");
-        inquilino.setValue(inq);
+        inquilinos.setValue(inq);
 
     }
 }
