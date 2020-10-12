@@ -83,7 +83,7 @@ public class DetallePropiedadFragment extends Fragment {
         });
 
          detallePropiedadViewModel.cargarInmueble(getArguments());
-        // etDom.setText(inmuebles.getDomicilio());
+
     }
 
 }

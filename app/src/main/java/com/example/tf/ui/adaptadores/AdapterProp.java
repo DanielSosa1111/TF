@@ -80,7 +80,7 @@ public class AdapterProp extends RecyclerView.Adapter<AdapterProp.ViewHolder> im
         }
     }
     public class ViewHolder extends RecyclerView.ViewHolder{
-//cambiar o sumar variables
+
         TextView dir, cod;
         ImageView imagen;
         CheckBox checkBox;
