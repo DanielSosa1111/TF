@@ -20,7 +20,6 @@ import com.example.tf.R;
 import com.example.tf.ui.adaptadores.AdapterInq;
 import com.example.tf.ui.entidades.Inquilino;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Inquilinos extends Fragment {
@@ -46,7 +45,7 @@ public class Inquilinos extends Fragment {
 
         rvInq = view.findViewById(R.id.rvInquilinos);
         inquilinosViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(InquilinosViewModel.class);
-        inquilinosViewModel.getInquilinos().observe(getViewLifecycleOwner(), new Observer<List<Inquilino>>() {
+        inquilinosViewModel.getInquilino().observe(getViewLifecycleOwner(), new Observer<List<Inquilino>>() {
             @Override
             public void onChanged(List<Inquilino> inquilinos) {
                 GridLayoutManager gridLayoutManager = new GridLayoutManager(context,2, GridLayoutManager.VERTICAL, false);
@@ -55,6 +54,6 @@ public class Inquilinos extends Fragment {
                 rvInq.setAdapter(adapter);
             }
         });
-        inquilinosViewModel.cargarInquilinos();
+        inquilinosViewModel.cargarInquilino();
     }
 }

@@ -6,13 +6,13 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.tf.ui.entidades.Inmuebles;
+import com.example.tf.ui.entidades.Inmueble;
 
 public class DetallePropiedadViewModel extends ViewModel {
     // TODO: Implement the ViewModel
-   private MutableLiveData<Inmuebles> inmuebles;
+   private MutableLiveData<Inmueble> inmuebles;
    public DetallePropiedadViewModel(){super();}
-   public LiveData<Inmuebles> getInmuebles(){
+   public LiveData<Inmueble> getInmuebles(){
 
        if(inmuebles==null){
            inmuebles=new MutableLiveData<>();
@@ -22,7 +22,7 @@ public class DetallePropiedadViewModel extends ViewModel {
 
    public void cargarInmueble(Bundle bundle){
 
-       Inmuebles inmu = (Inmuebles) bundle.getSerializable("datosProp");
+       Inmueble inmu = (Inmueble) bundle.getSerializable("datosProp");
        inmuebles.setValue(inmu);
 
    }

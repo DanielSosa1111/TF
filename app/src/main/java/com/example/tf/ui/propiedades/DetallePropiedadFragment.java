@@ -19,7 +19,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.example.tf.R;
-import com.example.tf.ui.entidades.Inmuebles;
+import com.example.tf.ui.entidades.Inmueble;
 
 public class DetallePropiedadFragment extends Fragment {
 
@@ -64,9 +64,9 @@ public class DetallePropiedadFragment extends Fragment {
 
 
         detallePropiedadViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(DetallePropiedadViewModel.class);
-        detallePropiedadViewModel.getInmuebles().observe(getActivity(), new Observer<Inmuebles>() {
+        detallePropiedadViewModel.getInmuebles().observe(getActivity(), new Observer<Inmueble>() {
             @Override
-            public void onChanged(Inmuebles inmuebles) {
+            public void onChanged(Inmueble inmuebles) {
 
                 etDom.setText(inmuebles.getDomicilio());
                 etAmb.setText(inmuebles.getAmbientes());

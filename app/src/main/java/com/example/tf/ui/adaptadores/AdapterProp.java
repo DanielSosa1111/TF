@@ -15,19 +15,19 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tf.R;
-import com.example.tf.ui.entidades.Inmuebles;
+import com.example.tf.ui.entidades.Inmueble;
 
 import java.util.List;
 
 public class AdapterProp extends RecyclerView.Adapter<AdapterProp.ViewHolder> implements View.OnClickListener{
 
     LayoutInflater inflater;
-    List<Inmuebles> model;
+    List<Inmueble> model;
     private Context context;
 
     private View.OnClickListener listener;
 
-    public AdapterProp(Context context, List<Inmuebles> model){
+    public AdapterProp(Context context, List<Inmueble> model){
 
         this.inflater = LayoutInflater.from(context);
         this.model = model;
@@ -96,7 +96,7 @@ public class AdapterProp extends RecyclerView.Adapter<AdapterProp.ViewHolder> im
                 public void onClick(View view) {
 
                     Bundle bundle = new Bundle();
-                    Inmuebles inmuebles = model.get(getAdapterPosition());
+                    Inmueble inmuebles = model.get(getAdapterPosition());
                     bundle.putSerializable("datosProp", inmuebles);
                     Navigation.findNavController((Activity) context, R.id.nav_host_fragment).navigate(R.id.detallePropiedades, bundle);
 

@@ -1,4 +1,4 @@
-package com.example.tf.ui.inquilinos;
+package com.example.tf;
 
 import androidx.lifecycle.ViewModelProviders;
 
@@ -12,26 +12,24 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.tf.R;
+public class DetalleInquilinos extends Fragment {
 
-public class ListaInquilinos extends Fragment {
+    private DetalleInquilinosViewModel mViewModel;
 
-    private ListaInquilinosViewModel mViewModel;
-
-    public static ListaInquilinos newInstance() {
-        return new ListaInquilinos();
+    public static DetalleInquilinos newInstance() {
+        return new DetalleInquilinos();
     }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.lista_inquilinos_fragment, container, false);
+        return inflater.inflate(R.layout.detalle_inquilino, container, false);
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(ListaInquilinosViewModel.class);
+        mViewModel = ViewModelProviders.of(this).get(DetalleInquilinosViewModel.class);
         // TODO: Use the ViewModel
     }
 

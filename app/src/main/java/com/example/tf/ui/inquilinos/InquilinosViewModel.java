@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class InquilinosViewModel extends AndroidViewModel {
-    private MutableLiveData<List<Inquilino>> inquilinos;
+    private MutableLiveData<List<Inquilino>> inquilino;
     private Context context;
 
     public InquilinosViewModel(@NonNull Application application){
@@ -24,19 +24,19 @@ public class InquilinosViewModel extends AndroidViewModel {
         context = application.getApplicationContext();
     }
 
-    public LiveData<List<Inquilino>> getInquilinos(){
-        if(inquilinos==null){
-            inquilinos = new MutableLiveData<>();
+    public LiveData<List<Inquilino>> getInquilino(){
+        if(inquilino==null){
+            inquilino = new MutableLiveData<>();
         }
-        return inquilinos;
+        return inquilino;
     }
 
-    public void cargarInquilinos(){
+    public void cargarInquilino(){
 
         ArrayList<Inquilino> inquilinos = new ArrayList<>();
         inquilinos.add(new Inquilino("26387598", "Simpson", "Bart", "Springfiled 1", "458*985*", R.drawable.bart));
         inquilinos.add(new Inquilino("26454598", "Simpson", "Lisa", "Springfiled 2", "458*985*", R.drawable.lisa));
         inquilinos.add(new Inquilino("23457598", "Simpson", "Maggie", "Springfiled 3", "458*985*", R.drawable.maggie));
-        this.inquilinos.setValue(inquilinos);
+        inquilino.setValue(inquilinos);
     }
 }

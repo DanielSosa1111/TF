@@ -54,4 +54,7 @@
     <string name="etDispInmueble">Disponible</string>
 
     <string name="btEditInmueble">Editar</string>
+
+    <string name="txtInqDireccion">Dirección</string>
+    <string name="etInqDireccion">dirección</string>
 </resources>

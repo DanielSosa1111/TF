@@ -69,7 +69,7 @@ public class AdapterInq extends RecyclerView.Adapter<AdapterInq.ViewHolder> {
                     Bundle bundle = new Bundle();
                     Inquilino inquilino = inquilinos.get(getAdapterPosition());
                     bundle.putSerializable("inquilinos", inquilino);
-                    //Navigation.findNavController((Activity) context,R.id.nav_host_fragment).navigate(R.id.listaInquilinos, bundle);
+                    Navigation.findNavController((Activity) context,R.id.nav_host_fragment).navigate(R.id.detalleInquilinos, bundle);
 
                 }
             });

@@ -24,6 +24,9 @@
         android:label="inquilinos_fragment"
         tools:layout="@layout/inquilinos_fragment" >
 
+        <action
+            android:id="@+id/action_inquilinos_to_detalleInquilinos"
+            app:destination="@id/detalleInquilinos" />
     </fragment>
     <fragment
         android:id="@+id/contratos"
@@ -51,4 +54,13 @@
         android:name="com.example.tf.ui.cerrar_sesion.CerrarSesion"
         android:label="cerrar_sesion_fragment"
         tools:layout="@layout/cerrar_sesion_fragment" />
+    <fragment
+        android:id="@+id/detalleInquilinos"
+        android:name="com.example.tf.DetalleInquilinos"
+        android:label="detalle_inquilino"
+        tools:layout="@layout/detalle_inquilino" >
+        <action
+            android:id="@+id/action_detalleInquilinos_to_inquilinos"
+            app:destination="@id/inquilinos" />
+    </fragment>
 </navigation>

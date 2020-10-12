@@ -2,15 +2,15 @@ package com.example.tf.ui.entidades;
 
 import java.io.Serializable;
 
-public class Inmuebles implements Serializable {
+public class Inmueble implements Serializable {
 
     private String codigo, domicilio, ambientes, precio, tipo, uso;
     private int imagenId;
     private boolean estado;
 
-    public Inmuebles(){};
+    public Inmueble(){};
 
-    public Inmuebles(String codigo, String domicilio, String ambientes, String precio, String tipo, String uso, int imagenId, boolean estado) {
+    public Inmueble(String codigo, String domicilio, String ambientes, String precio, String tipo, String uso, int imagenId, boolean estado) {
         this.codigo = codigo;
         this.domicilio = domicilio;
         this.ambientes = ambientes;

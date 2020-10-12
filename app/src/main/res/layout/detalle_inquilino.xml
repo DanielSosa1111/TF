@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF9E80"
+    android:orientation="vertical"
+    tools:context=".ui.perfil.Perfil">
+
+    <TextView
+        android:id="@+id/text_perfil"
+        android:layout_width="match_parent"
+        android:layout_height="15sp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="#FF9E80"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtInqDoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF9E80"
+        android:text="@string/txtPerfilDoc"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etInqDoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:background="#FF9E80"
+        android:ems="10"
+        android:autofillHints="@string/etPerfilDni"
+        android:enabled="false"
+        android:inputType="textPersonName"
+        android:hint="@string/etPerfilDni"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        android:foregroundTint="@color/colorPrimary" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/txtInqApellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF9E80"
+        android:layout_marginTop="10sp"
+        android:text="@string/txtPerfilApellido"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etInqApellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:enabled="false"
+        android:background="#FF9E80"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/etPerfilApellido"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        android:foregroundTint="@color/colorPrimary" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/txtInqNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF9E80"
+        android:text="@string/txtPerfilNombre"
+        android:layout_marginTop="10sp"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etInqNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:background="#FF9E80"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textPersonName"
+        android:hint="@string/etPerfilNombre"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        android:foregroundTint="@color/colorPrimary" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/txtInqTel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF9E80"
+        android:text="@string/txtPerfilTel"
+        android:layout_marginTop="10sp"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etInqTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:background="#FF9E80"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textPersonName"
+        android:hint="@string/etPerfilTel"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        android:foregroundTint="@color/colorPrimary" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/txtInqDireccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF9E80"
+        android:text="@string/txtPerfilEmail"
+        android:layout_marginTop="10sp"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etInqDireccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:background="#FF9E80"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textPersonName"
+        android:hint="@string/etPerfilEmail"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        android:foregroundTint="@color/colorPrimary" />
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+
+
+
+
+    <View
+        android:id="@+id/divider6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+
+</LinearLayout>
