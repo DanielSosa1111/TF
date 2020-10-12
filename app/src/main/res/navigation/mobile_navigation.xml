@@ -3,23 +3,52 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@id/perfil">
+    <fragment
+        android:id="@+id/perfil"
+        android:name="com.example.tf.ui.perfil.Perfil"
+        android:label="perfil_fragment"
+        tools:layout="@layout/perfil_fragment" />
+    <fragment
+        android:id="@+id/propiedades"
+        android:name="com.example.tf.ui.propiedades.Propiedades"
+        android:label="propiedades_fragment"
+        tools:layout="@layout/propiedades_fragment" >
+        <action
+            android:id="@+id/action_propiedades_to_detallePropiedades"
+            app:destination="@id/detallePropiedades" />
+    </fragment>
+    <fragment
+        android:id="@+id/inquilinos"
+        android:name="com.example.tf.ui.inquilinos.Inquilinos"
+        android:label="inquilinos_fragment"
+        tools:layout="@layout/inquilinos_fragment" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/contratos"
+        android:name="com.example.tf.ui.contratos.Contratos"
+        android:label="contratos_fragment"
+        tools:layout="@layout/contratos_fragment" />
+    <fragment
+        android:id="@+id/pagos"
+        android:name="com.example.tf.ui.pagos.Pagos"
+        android:label="pagos_fragment"
+        tools:layout="@layout/pagos_fragment" />
+
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.example.tf.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
-
+        android:id="@+id/detallePropiedades"
+        android:name="com.example.tf.ui.propiedades.DetallePropiedadFragment"
+        android:label="fragment_detalle_propiedades"
+        tools:layout="@layout/fragment_detalle_propiedades" >
+        <action
+            android:id="@+id/action_detallePropiedades_to_propiedades"
+            app:destination="@id/propiedades" />
+    </fragment>
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.tf.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.tf.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/cerrarSesion"
+        android:name="com.example.tf.ui.cerrar_sesion.CerrarSesion"
+        android:label="cerrar_sesion_fragment"
+        tools:layout="@layout/cerrar_sesion_fragment" />
 </navigation>

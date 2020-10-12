@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="228dp"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/ivProp1"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:srcCompat="@drawable/casaladrillo1" />
+
+        <TextView
+            android:id="@+id/txCodigoProp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="35dp"
+            android:layout_toRightOf="@id/ivProp1"
+            android:text="Código"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txDireccionProp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txCodigoProp"
+            android:layout_alignStart="@id/txCodigoProp"
+
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="183dp"
+            android:layout_toRightOf="@id/ivProp1"
+            android:text="@string/etDirInmueble"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/cbListaPropDisp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/txDireccionProp"
+            android:layout_marginHorizontal="22dp"
+            android:layout_marginVertical="45dp"
+            android:clickable="false"
+            android:layout_toRightOf="@id/ivProp1"
+            android:text="Disponible" />
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

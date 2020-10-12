@@ -11,7 +11,47 @@
     <string name="pass_login">Password</string>
 
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_perfil">Perfil</string>
+    <string name="menu_propiedades">Propiedades</string>
+    <string name="menu_inquilinos">Inquilinos</string>
+    <string name="menu_pagos">Pagos</string>
+    <string name="menu_contratos">Contratos</string>
+    <string name="menu_cerrar_sesion">Cerrar Sesión</string>
+
+    <string name="txtPerfilDoc">Nro de documento</string>
+    <string name="txtPerfilApellido">Apellido</string>
+    <string name="txtPerfilNombre">Nombre</string>
+    <string name="txtPerfilTel">Teléfono</string>
+    <string name="txtPerfilEmail">E-mail</string>
+    <string name="txtPerfilPass">Password</string>
+
+    <string name="etPerfilDni">dni</string>
+    <string name="etPerfilApellido">apellido</string>
+    <string name="etPerfilNombre">nombre completo</string>
+    <string name="etPerfilTel">código+nro.</string>
+    <string name="etPerfilEmail">email</string>
+    <string name="etPerfilPass">password</string>
+
+    <string name="btnPerfilAceptar">ACEPTAR</string>
+    <string name="btnPerfilEdit">EDITAR</string>
+
+
+    //inmueble
+    <string name="txDetalleInmueble">DETALLES DEL INMUEBLE</string>
+    <string name="txDomInmueble">Domicilio:</string>
+    <string name="txAmbInmueble">Ambientes:</string>
+    <string name="txTipoInmueble">Tipo:</string>
+    <string name="txUsoInmueble">Uso:</string>
+    <string name="txPrecioInmueble">Precio:</string>
+    <string name="txDispInmueble">Disponible:</string>
+
+
+    <string name="etDirInmueble">calle, altura</string>
+    <string name="etAmbInmueble">ambientes</string>
+    <string name="etTipoInmueble">casa, departamento, ph,....</string>
+    <string name="etUsoInmueble">comercial, privado</string>
+    <string name="etPrecioInmueble">precio</string>
+    <string name="etDispInmueble">Disponible</string>
+
+    <string name="btEditInmueble">Editar</string>
 </resources>

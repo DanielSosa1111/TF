@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF9E80"
+    android:orientation="vertical"
+    tools:context=".ui.perfil.Perfil">
+
+    <TextView
+        android:id="@+id/text_perfil"
+        android:layout_width="match_parent"
+        android:layout_height="15sp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="#FF9E80"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtPerfilDoc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF9E80"
+        android:text="@string/txtPerfilDoc"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etPerfilDni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:background="#FF9E80"
+        android:ems="10"
+        android:autofillHints="@string/etPerfilDni"
+        android:enabled="false"
+        android:inputType="textPersonName"
+        android:hint="@string/etPerfilDni"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        android:foregroundTint="@color/colorPrimary" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/txtPerfilApellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF9E80"
+        android:layout_marginTop="10sp"
+        android:text="@string/txtPerfilApellido"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etPerfilApellido"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:enabled="false"
+        android:background="#FF9E80"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/etPerfilApellido"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        android:foregroundTint="@color/colorPrimary" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/txtPerfilNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF9E80"
+        android:text="@string/txtPerfilNombre"
+        android:layout_marginTop="10sp"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etPerfilNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:background="#FF9E80"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textPersonName"
+        android:hint="@string/etPerfilNombre"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        android:foregroundTint="@color/colorPrimary" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/txtPerfilTel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF9E80"
+        android:text="@string/txtPerfilTel"
+        android:layout_marginTop="10sp"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etPerfilTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:background="#FF9E80"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textPersonName"
+        android:hint="@string/etPerfilTel"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        android:foregroundTint="@color/colorPrimary" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/txtPerfilEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF9E80"
+        android:text="@string/txtPerfilEmail"
+        android:layout_marginTop="10sp"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etPerfilEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:background="#FF9E80"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textPersonName"
+        android:hint="@string/etPerfilEmail"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        android:foregroundTint="@color/colorPrimary" />
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:id="@+id/txtPerfilPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FF9E80"
+        android:text="@string/txtPerfilPass"
+        android:layout_marginTop="10sp"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etPerfilPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5sp"
+        android:background="#FF9E80"
+        android:ems="10"
+        android:enabled="false"
+        android:inputType="textPersonName"
+        android:hint="@string/etPerfilPass"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        android:foregroundTint="@color/colorPrimary" />
+
+
+    <View
+        android:id="@+id/divider6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="230dp"
+            android:layout_height="30dp" />
+
+        <Button
+            android:id="@+id/btnPerfilEditar"
+            android:layout_marginTop="5dp"
+            android:layout_width="80sp"
+            android:visibility="visible"
+            android:layout_height="wrap_content"
+            android:text="@string/btnPerfilEdit"
+            />
+
+        <Button
+            android:id="@+id/btnPerfilAceptar"
+            android:layout_marginTop="5dp"
+            android:layout_width="90sp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="@string/btnPerfilAceptar" />
+    </LinearLayout>
+</LinearLayout>
