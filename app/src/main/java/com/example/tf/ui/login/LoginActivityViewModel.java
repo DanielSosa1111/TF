@@ -3,6 +3,7 @@ package com.example.tf.ui.login;
 import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
+import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
@@ -10,10 +11,11 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.example.tf.MenuNavegable;
+import com.example.tf.R;
 
 public class LoginActivityViewModel extends AndroidViewModel {
 
-    private MutableLiveData<String>btIngresar; //objeto observador lectura y escritura
+    private MutableLiveData<String>btIngresar;
     private Context context;
 
     public LoginActivityViewModel(@NonNull Application application) {
@@ -31,12 +33,11 @@ public class LoginActivityViewModel extends AndroidViewModel {
 
     public void ingresar(String correo, String pass){
 
-
         if(correo.equals("dani") && pass.equals("1234")){
            btIngresar.setValue("Entrando");
            Intent i = new Intent(context, MenuNavegable.class);
            context.startActivity(i);
-            //View view = View.inflate(R.)
+
         }else{
             btIngresar.setValue("completar campos");
         }

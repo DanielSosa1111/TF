@@ -45,6 +45,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 vm.ingresar(correo.getText().toString(), password.getText().toString());
+                correo.setText("");
+                password.setText("");
             }
         });
 
