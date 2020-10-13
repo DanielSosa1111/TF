@@ -1,4 +1,4 @@
-package com.example.tf.ui.entidades;
+package com.example.tf.entidades;
 
 import java.io.Serializable;
 

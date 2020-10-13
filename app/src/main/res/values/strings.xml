@@ -18,7 +18,7 @@
     <string name="menu_contratos">Contratos</string>
     <string name="menu_cerrar_sesion">Cerrar Sesión</string>
 
-    <string name="txtPerfilDoc">Nro de documento</string>
+    <string name="txtPerfilDoc">Nro de documento:</string>
     <string name="txtPerfilApellido">Apellido</string>
     <string name="txtPerfilNombre">Nombre</string>
     <string name="txtPerfilTel">Teléfono</string>

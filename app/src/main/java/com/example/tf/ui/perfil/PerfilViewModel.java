@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.tf.ui.entidades.PerfilDatos;
+import com.example.tf.entidades.PerfilDatos;
 
 public class PerfilViewModel extends ViewModel {
 

@@ -18,7 +18,7 @@ import android.view.ViewGroup;
 
 import com.example.tf.R;
 import com.example.tf.ui.adaptadores.AdapterInq;
-import com.example.tf.ui.entidades.Inquilino;
+import com.example.tf.entidades.Inquilino;
 
 import java.util.List;
 

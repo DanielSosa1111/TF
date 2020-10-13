@@ -2,7 +2,6 @@ package com.example.tf.ui.pagos;
 
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 
 import android.app.Activity;
 import android.content.Context;
@@ -20,8 +19,7 @@ import android.view.ViewGroup;
 
 import com.example.tf.R;
 import com.example.tf.ui.adaptadores.AdapterProp;
-import com.example.tf.ui.entidades.Inmueble;
-import com.example.tf.ui.pagos.PagosViewModel;
+import com.example.tf.entidades.Inmueble;
 import com.example.tf.ui.propiedades.PropiedadesViewModel;
 
 import java.util.List;

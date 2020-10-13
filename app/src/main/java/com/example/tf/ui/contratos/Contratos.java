@@ -2,7 +2,6 @@ package com.example.tf.ui.contratos;
 
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -19,8 +18,7 @@ import android.view.ViewGroup;
 
 import com.example.tf.R;
 import com.example.tf.ui.adaptadores.AdapterContratos;
-import com.example.tf.ui.adaptadores.AdapterProp;
-import com.example.tf.ui.entidades.Contrato;
+import com.example.tf.entidades.Contrato;
 
 import java.util.List;
 
@@ -58,6 +56,6 @@ public class Contratos extends Fragment {
 
             }
         });
-
+        mViewModel.cargaLista();
    }
 }

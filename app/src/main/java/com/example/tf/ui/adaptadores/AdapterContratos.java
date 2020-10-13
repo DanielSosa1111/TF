@@ -4,10 +4,10 @@ package com.example.tf.ui.adaptadores;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,8 +16,7 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tf.R;
-import com.example.tf.ui.entidades.Contrato;
-import com.example.tf.ui.entidades.Inmueble;
+import com.example.tf.entidades.Contrato;
 
 import java.util.List;
 
@@ -39,7 +38,7 @@ public class AdapterContratos extends RecyclerView.Adapter<AdapterContratos.View
     @NonNull
     @Override
     public AdapterContratos.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = inflater.inflate(R.layout.lista_propiedades, parent, false);
+        View view = inflater.inflate(R.layout.contratos_item, parent, false);
         //view.setOnClickListener(this);
         return new ViewHolder(view);
     }
@@ -90,7 +89,7 @@ public class AdapterContratos extends RecyclerView.Adapter<AdapterContratos.View
                     Bundle bundle = new Bundle();
                     Contrato contratos = model.get(getAdapterPosition());
                     bundle.putSerializable("datosContrato", contratos);
-                    Navigation.findNavController((Activity) context, R.id.nav_host_fragment).navigate(R.id.detalleContratos);
+                    Navigation.findNavController((Activity) context, R.id.nav_host_fragment).navigate(R.id.detalleContratos, bundle);
                 }
             });
 

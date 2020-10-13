@@ -16,7 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.tf.R;
-import com.example.tf.ui.entidades.PerfilDatos;
+import com.example.tf.entidades.PerfilDatos;
 
 public class Perfil extends Fragment {
 

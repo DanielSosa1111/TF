@@ -9,7 +9,7 @@
     android:layout_height="match_parent"
     android:background="#FF9E80"
     android:orientation="vertical"
-    tools:context=".ui.perfil.Perfil">
+    >
 
     <TextView
         android:id="@+id/text_perfil"

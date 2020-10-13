@@ -19,7 +19,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.example.tf.R;
-import com.example.tf.ui.entidades.Inmueble;
+import com.example.tf.entidades.Inmueble;
 
 public class DetallePropiedadFragment extends Fragment {
 

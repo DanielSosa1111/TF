@@ -2,7 +2,6 @@ package com.example.tf.ui.inquilinos;
 
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 
 import android.os.Bundle;
 
@@ -10,12 +9,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
-import com.example.tf.ui.entidades.Inquilino;
-import com.example.tf.DetalleInquilinos;
+import com.example.tf.entidades.Inquilino;
 import com.example.tf.R;
 
 public class DetalleInquilino extends Fragment {
@@ -26,24 +25,23 @@ public class DetalleInquilino extends Fragment {
 
 
 
-    public static DetalleInquilino newInstance() { return new DetalleInquilino(); }
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.detalle_inquilino, container, false);
-        inicializar (view, savedInstanceState);
+        Log.d("salida", "pasando");
+        inicializar (view);
         return view;
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        detalleInquilinoViewModel = ViewModelProviders.of(this).get(DetalleInquilinoViewModel.class);
+
         // TODO: Use the ViewModel
     }
 
-    public void inicializar(View view, Bundle bundle){
+    public void inicializar(View view){
 
         etDni = view.findViewById(R.id.etInqDoc);
         etApellido = view.findViewById(R.id.etInqApellido);

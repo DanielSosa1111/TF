@@ -15,7 +15,7 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tf.R;
-import com.example.tf.ui.entidades.Inmueble;
+import com.example.tf.entidades.Inmueble;
 
 import java.util.List;
 

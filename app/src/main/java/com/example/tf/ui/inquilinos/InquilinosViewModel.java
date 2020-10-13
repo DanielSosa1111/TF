@@ -9,7 +9,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.example.tf.R;
-import com.example.tf.ui.entidades.Inquilino;
+import com.example.tf.entidades.Inquilino;
 
 import java.util.ArrayList;
 import java.util.List;

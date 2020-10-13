@@ -14,8 +14,7 @@ import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tf.R;
-import com.example.tf.ui.entidades.Inmueble;
-import com.example.tf.ui.entidades.Inquilino;
+import com.example.tf.entidades.Inquilino;
 
 import java.util.List;
 
@@ -86,6 +85,7 @@ public class AdapterInq extends RecyclerView.Adapter<AdapterInq.ViewHolder> impl
                 public void onClick(View view) {
                     Bundle bundle = new Bundle();
                     Inquilino inquilinos = model.get(getAdapterPosition());
+
                     bundle.putSerializable("datosInq", inquilinos);
                     Navigation.findNavController((Activity) context, R.id.nav_host_fragment).navigate(R.id.detalleInquilinos, bundle);
                 }

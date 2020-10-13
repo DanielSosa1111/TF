@@ -6,7 +6,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-import com.example.tf.ui.entidades.Inmueble;
+import com.example.tf.entidades.Inmueble;
 
 public class DetallePropiedadViewModel extends ViewModel {
     // TODO: Implement the ViewModel

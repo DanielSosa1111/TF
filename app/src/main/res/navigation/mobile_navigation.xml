@@ -60,7 +60,7 @@
         tools:layout="@layout/cerrar_sesion_fragment" />
     <fragment
         android:id="@+id/detalleInquilinos"
-        android:name="com.example.tf.DetalleInquilinos"
+        android:name="com.example.tf.ui.inquilinos.DetalleInquilino"
         android:label="detalle_inquilino"
         tools:layout="@layout/detalle_inquilino" >
         <action
@@ -69,7 +69,7 @@
     </fragment>
     <fragment
         android:id="@+id/detalleContratos"
-        android:name="com.example.tf.DetalleContratos"
+        android:name="com.example.tf.ui.contratos.DetalleContratos"
         android:label="contratos_detalle"
         tools:layout="@layout/contratos_detalle" >
         <action
