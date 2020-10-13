@@ -2,9 +2,7 @@ package com.example.tf.ui.pagos;
 
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 
@@ -19,25 +17,25 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.tf.R;
-import com.example.tf.entidades.Inmueble;
-import com.example.tf.ui.adaptadores.AdapterProp;
-import com.example.tf.ui.propiedades.PropiedadesViewModel;
+import com.example.tf.entidades.Pago;
+import com.example.tf.ui.adaptadores.AdapterPagos;
 
 import java.util.List;
 
 public class Pagos extends Fragment {
 
-    private com.example.tf.ui.pagos.PagosViewModel mViewModelPagos;
-    private com.example.tf.ui.propiedades.PropiedadesViewModel mViewModeProp;
-    private AdapterProp adapterProp;
-    private RecyclerView recyclerViewI;
+    private com.example.tf.ui.pagos.PagosViewModel mViewModel;
+    private AdapterPagos adapterPagos;
+    private RecyclerView recyclerView;
     private Context context;
-    Activity actividad;
+
+    public static Pagos newIntance(){ return new Pagos(); }
+
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
-        View view= inflater.inflate(R.layout.propiedades_fragment, container, false);
+        View view= inflater.inflate(R.layout.pago_rv, container, false);
         context = view.getContext();
         inicializar(view);
         return view;
@@ -45,21 +43,18 @@ public class Pagos extends Fragment {
 
     public void inicializar(View view) {
 
-        recyclerViewI = view.findViewById(R.id.recyclerViewProp);
-        mViewModeProp = ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(PropiedadesViewModel.class);
+        recyclerView = view.findViewById(R.id.pagosRv);
+        mViewModel = ViewModelProvider.AndroidViewModelFactory.getInstance(getActivity().getApplication()).create(PagosViewModel.class);
 
-        mViewModeProp.getListMutableLiveData().observe(getViewLifecycleOwner(), new Observer<List<Inmueble>>() {
+        mViewModel.getListMutableLiveData().observe(getViewLifecycleOwner(), new Observer<List<Pago>>() {
             @Override
-            public void onChanged(final List<Inmueble> inmuebles) {
-                recyclerViewI.setLayoutManager(new LinearLayoutManager(getContext()));
-                adapterProp = new AdapterProp(getContext(), inmuebles);
-                recyclerViewI.setAdapter(adapterProp);
-
-
+            public void onChanged(List<Pago> pagos) {
+                recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+                adapterPagos = new AdapterPagos(getContext(), pagos);
+                recyclerView.setAdapter(adapterPagos);
             }
         });
-
-        mViewModeProp.cargarLista();
+        mViewModel.cargarLista();
     }
 
 }
