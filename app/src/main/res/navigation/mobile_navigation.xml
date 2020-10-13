@@ -37,12 +37,6 @@
             android:id="@+id/action_contratos_to_detalleContratos"
             app:destination="@id/detalleContratos" />
     </fragment>
-    <fragment
-        android:id="@+id/pagos"
-        android:name="com.example.tf.ui.pagos.Pagos"
-        android:label="pagos_fragment"
-        tools:layout="@layout/pagos_fragment" />
-
 
     <fragment
         android:id="@+id/detallePropiedades"
@@ -76,4 +70,14 @@
             android:id="@+id/action_detalleContratos_to_contratos"
             app:destination="@id/contratos" />
     </fragment>
+    <fragment
+        android:id="@+id/pagos"
+        android:name="com.example.tf.ui.pagos.Pagos"
+        android:label="pago_rv"
+        tools:layout="@layout/pago_rv" />
+    <fragment
+        android:id="@+id/detallePagos"
+        android:name="com.example.tf.ui.pagos.DetallePagos"
+        android:label="pago_detalle"
+        tools:layout="@layout/pago_detalle" />
 </navigation>
