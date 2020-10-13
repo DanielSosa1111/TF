@@ -27,6 +27,6 @@
         <item
             android:id="@+id/cerrarSesion"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="CerrarS" />
+            android:title="Cerrar Sesión" />
     </group>
 </menu>

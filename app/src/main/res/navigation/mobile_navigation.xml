@@ -74,10 +74,18 @@
         android:id="@+id/pagos"
         android:name="com.example.tf.ui.pagos.Pagos"
         android:label="pago_rv"
-        tools:layout="@layout/pago_rv" />
+        tools:layout="@layout/pago_rv" >
+        <action
+            android:id="@+id/action_pagos_to_detallePagos"
+            app:destination="@id/detallePagos" />
+    </fragment>
     <fragment
         android:id="@+id/detallePagos"
         android:name="com.example.tf.ui.pagos.DetallePagos"
         android:label="pago_detalle"
-        tools:layout="@layout/pago_detalle" />
+        tools:layout="@layout/pago_detalle" >
+        <action
+            android:id="@+id/action_detallePagos_to_pagos"
+            app:destination="@id/pagos" />
+    </fragment>
 </navigation>
