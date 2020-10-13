@@ -32,7 +32,11 @@
         android:id="@+id/contratos"
         android:name="com.example.tf.ui.contratos.Contratos"
         android:label="contratos_fragment"
-        tools:layout="@layout/contratos_fragment" />
+        tools:layout="@layout/contratos_rv" >
+        <action
+            android:id="@+id/action_contratos_to_detalleContratos"
+            app:destination="@id/detalleContratos" />
+    </fragment>
     <fragment
         android:id="@+id/pagos"
         android:name="com.example.tf.ui.pagos.Pagos"
@@ -62,5 +66,14 @@
         <action
             android:id="@+id/action_detalleInquilinos_to_inquilinos"
             app:destination="@id/inquilinos" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleContratos"
+        android:name="com.example.tf.DetalleContratos"
+        android:label="contratos_detalle"
+        tools:layout="@layout/contratos_detalle" >
+        <action
+            android:id="@+id/action_detalleContratos_to_contratos"
+            app:destination="@id/contratos" />
     </fragment>
 </navigation>
