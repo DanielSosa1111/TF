@@ -36,5 +36,7 @@ public class PagosViewModel extends AndroidViewModel {
         listaPagos.add(new Pago("1", "15/02/20", "5000", "TER365", "El Dique 548", R.drawable.casaladrillo1));
         listaPagos.add(new Pago("2", "20/12/20", "1000", "ABC458", "Paraíso 554", R.drawable.casaladrillo2));
         listaPagos.add(new Pago("3", "10/04/20", "2000", "TER345", "Rivera Maya 2018", R.drawable.casaladrillo));
+
+        listMutableLiveData.setValue(listaPagos);
     }
 }

@@ -79,7 +79,7 @@ public class AdapterPagos extends RecyclerView.Adapter<AdapterPagos.ViewHolder> 
                     Bundle bundle = new Bundle();
                     Pago pagos = model.get(getAdapterPosition());
                     bundle.putSerializable("datosPagos", pagos);
-                    Navigation.findNavController((Activity) context, R.id.nav_host_fragment).navigate(R.id.detallePagos);
+                    Navigation.findNavController((Activity) context, R.id.nav_host_fragment).navigate(R.id.detallePagos, bundle);
                 }
             });
         }
